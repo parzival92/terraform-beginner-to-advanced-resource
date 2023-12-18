@@ -1,11 +1,11 @@
 
 #### GitHub Provider Terraform:
 
-https://registry.terraform.io/providers/integrations/github/latest/docs
+### https://registry.terraform.io/providers/integrations/github/latest/docs
 
-Code Used:
+## Code Used:
 
-```sh
+ ```sh
 
 terraform {
   required_providers {
@@ -17,20 +17,22 @@ terraform {
 }
 
 provider "github" {
-  token = "your-token-here"
+  token = "<<Your PAT token here>>"
 }
 
-resource "github_repository" "example" {
-  name        = "example"
-  description = "My awesome codebase"
+resource "github_repository" "firstgithubrepo" {
+  name        = "CreatedviaTerraform"
+  description = "This repo has been created by terraform"
 
   visibility = "public"
 
 }
-```
-#### Initialize and Apply:
-```sh
-terraform init
-terraform plan
-terraform apply
-```
+
+resource "github_repository" "secondgithubrepo" {
+  name        = "CreatedviaTerraform2"
+  description = "This repo has been created by terraform"
+
+  visibility = "public"
+
+}
+ ```

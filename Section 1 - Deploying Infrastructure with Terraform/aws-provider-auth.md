@@ -1,4 +1,4 @@
-### AWS Documentation Referenced:
+<!-- ### AWS Documentation Referenced:
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
@@ -24,4 +24,4 @@ terraform destroy -auto-approve
 ### AWS CLI commands Used:
 ```sh
 aws configure
-```
+``` -->
