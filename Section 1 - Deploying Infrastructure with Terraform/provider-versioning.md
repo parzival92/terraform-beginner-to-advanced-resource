@@ -10,15 +10,24 @@ version    = ">=2.10,<=2.30"
 ### Base Configuration - provider.versioning.tf
 
 ```sh
-provider "aws" {
-  region     = "us-west-2"
-  access_key = "YOUR-ACCESS-KEY"
-  secret_key = "YOUR-SECRET-KEY"
-  version    = ">=2.10,<=2.30"
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "~> 3.0"
+    }
+  }
 }
 
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
-   instance_type = "t2.micro"
+resource "azurerm_resource_group" "linuxvmrg" {
+  location = "eastus"
+  name     = "RG7DEC"
+  tags     = {}
+  timeouts {
+    create = null
+    delete = null
+    read   = null
+    update = null
+  }
 }
 ```
